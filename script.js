@@ -1,10 +1,10 @@
 const rooms = [
-  { title: "La luz de tus ojos", icon: "✧", subtitle: "Hay miradas que se quedan contigo.", description: "Hay algo en tus ojos que siempre consigue llamar mi atención. A veces no hace falta decir nada; basta con mirarte para encontrar un motivo más para sonreír.", quote: "«Hay miradas que parecen guardar un universo entero.»", photo: "cualidad-01.jpg" },
-  { title: "Tu sonrisa", icon: "☼", subtitle: "Una de mis cosas favoritas.", description: "Tu sonrisa tiene esa manera tan especial de iluminar hasta los días más sencillos. Ojalá nunca olvides lo bonita que es.", quote: "«Si pudiera guardar un instante, elegiría uno en el que estés sonriendo.»", photo: "cualidad-02.jpg" },
-  { title: "Tu forma de ser", icon: "❀", subtitle: "Eso que te hace ser tú.", description: "No se trata solamente de cómo te ves. También admiro esos pequeños detalles, tus ocurrencias y esa esencia que no se parece a la de nadie.", quote: "«Lo bonito de ti también está en todo lo que no se ve.»", photo: "cualidad-03.jpg" },
-  { title: "Tu belleza", icon: "✦", subtitle: "En cada pequeño detalle.", description: "Quería dedicarte un espacio para recordarte que no necesitas compararte con nadie. Tienes una belleza propia, y merece ser celebrada.", quote: "«No tienes que parecerte a nadie para ser maravillosa.»", photo: "cualidad-04.jpg" },
-  { title: "Nuestros recuerdos", icon: "♡", subtitle: "Momentos que guardo con cariño.", description: "Hay momentos pequeños que terminan significando muchísimo. Esta sala está reservada para esos recuerdos que merecen quedarse un ratito más.", quote: "«Qué bonito coincidir contigo en esta historia.»", photo: "cualidad-05.jpg" },
-  { title: "Todo lo que eres", icon: "☾", subtitle: "Y todo lo que todavía falta descubrir.", description: "Esta última sala no intenta describirte por completo. Solamente quiere recordarte que todavía hay muchísimas cosas bonitas por descubrir de ti.", quote: "«Y entre tantas cosas bonitas, mi favorita siempre será simplemente tú.»", photo: "cualidad-06.jpg" }
+  { title: "La luz de tus ojos", icon: "✧", subtitle: "Hay miradas que se quedan contigo.", description: "Hay algo en tus ojos que siempre consigue llamar mi atención. A veces no hace falta decir nada; basta con mirarte para encontrar un motivo más para sonreír.", quote: "«Hay miradas que parecen guardar un universo entero.»", photo: "cualidad-01.jpeg" },
+  { title: "Tu sonrisa", icon: "☼", subtitle: "Una de mis cosas favoritas.", description: "Tu sonrisa tiene esa manera tan especial de iluminar hasta los días más sencillos. Ojalá nunca olvides lo bonita que es.", quote: "«Si pudiera guardar un instante, elegiría uno en el que estés sonriendo.»", photo: "cualidad-02.jpeg" },
+  { title: "Tu forma de ser", icon: "❀", subtitle: "Eso que te hace ser tú.", description: "No se trata solamente de cómo te ves. También admiro esos pequeños detalles, tus ocurrencias y esa esencia que no se parece a la de nadie.", quote: "«Lo bonito de ti también está en todo lo que no se ve.»", photo: "cualidad-03.jpeg" },
+  { title: "Tu belleza", icon: "✦", subtitle: "En cada pequeño detalle.", description: "Quería dedicarte un espacio para recordarte que no necesitas compararte con nadie. Tienes una belleza propia, y merece ser celebrada.", quote: "«No tienes que parecerte a nadie para ser maravillosa.»", photo: "cualidad-04.jpeg" },
+  { title: "Nuestros recuerdos", icon: "♡", subtitle: "Momentos que guardo con cariño.", description: "Hay momentos pequeños que terminan significando muchísimo. Esta sala está reservada para esos recuerdos que merecen quedarse un ratito más.", quote: "«Qué bonito coincidir contigo en esta historia.»", photo: "cualidad-05.jpeg" },
+  { title: "Todo lo que eres", icon: "☾", subtitle: "Y todo lo que todavía falta descubrir.", description: "Esta última sala no intenta describirte por completo. Solamente quiere recordarte que todavía hay muchísimas cosas bonitas por descubrir de ti.", quote: "«Y entre tantas cosas bonitas, mi favorita siempre será simplemente tú.»", photo: "cualidad-06.jpeg" }
 ];
 
 const screens = ["welcome", "museum", "roomView", "letterScreen"];
@@ -50,7 +50,9 @@ function openRoom(index) {
     <p class="eyebrow">SALA 0${index + 1} · UNA PARTE DE TI</p>
     <h2>${room.title}</h2>
     <p class="room-description">${room.description}</p>
-    <div class="photo-placeholder">✧<br>Tu fotografía irá aquí<br><small>assets/fotos/${room.photo}</small></div>
+    <figure class="room-photo">
+      <img src="assets/fotos/${room.photo}" alt="${room.title}" loading="lazy">
+    </figure>
     <p class="room-quote">${room.quote}</p>`;
   $("roomCounter").textContent = `SALA 0${index + 1} / 06`;
   $("previousRoom").disabled = index === 0;

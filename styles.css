@@ -51,7 +51,9 @@ h1 em, h2 em { color: var(--pink); font-weight: 400; }
 .room-content { width: min(100%, 850px); text-align: center; min-height: 420px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .room-content .room-symbol { font-size: 48px; color: var(--pink); text-shadow: 0 0 30px rgba(213,165,255,.5); }
 .room-content h2 { font-size: clamp(42px, 7vw, 76px); margin: 16px 0 8px; }.room-content .room-description { color: var(--muted); line-height: 1.9; max-width: 570px; font-size: 14px; }
-.photo-placeholder { width: min(100%, 340px); aspect-ratio: 4/3; margin: 28px auto 20px; border: 1px dashed rgba(221,193,255,.4); display: grid; place-items: center; padding: 24px; background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(174,125,215,.08)); color: #c2afd8; font-size: 11px; line-height: 1.7; }
+.room-photo { width: min(100%, 440px); aspect-ratio: 4 / 3; margin: 28px auto 20px; overflow: hidden; border: 1px solid rgba(221,193,255,.38); border-radius: 8px; background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(174,125,215,.08)); box-shadow: 0 18px 55px rgba(0,0,0,.28), 0 0 35px rgba(174,125,215,.12); }
+.room-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .7s ease; }
+.room-photo:hover img { transform: scale(1.035); }
 .room-quote { font: italic 24px "Cormorant Garamond", serif; color: var(--pink); max-width: 600px; }
 .room-navigation { width: min(100%, 850px); display: flex; align-items: center; justify-content: space-between; margin-top: 35px; }.room-navigation span { color: #8e7da3; font-size: 9px; letter-spacing: .17em; }
 .outline-button { border: 1px solid var(--line); color: var(--lavender); background: rgba(255,255,255,.025); padding: 11px 16px; border-radius: 30px; cursor: pointer; font-size: 11px; transition: background .2s; }.outline-button:hover { background: rgba(194,157,230,.12); }
