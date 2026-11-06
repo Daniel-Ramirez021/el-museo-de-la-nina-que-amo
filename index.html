@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100b20">
+  <meta name="description" content="Un lugar creado especialmente para ti.">
+  <title>El museo de la niña que amo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient-glow glow-one"></div>
+  <div class="ambient-glow glow-two"></div>
+  <div id="stars" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Inicio">✦ <span>UN LUGAR PARA TI</span></a>
+    <button class="sound-toggle" id="soundToggle" aria-label="Activar o pausar música">
+      <span class="sound-disc" id="soundDisc">♫</span><span id="soundLabel">Música apagada</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="welcome screen active" id="welcome">
+      <div class="eyebrow"><span></span> UNA EXPERIENCIA HECHA PARA TI <span></span></div>
+      <p class="script intro-script">Hay lugares que se visitan...</p>
+      <h1>El museo de<br><em>la niña que amo</em></h1>
+      <p class="welcome-copy">Y hay uno que existe solamente para celebrar todo lo maravilloso que hay en ti.</p>
+      <button class="primary-button" id="enterButton">Entrar al museo <span>↗</span></button>
+      <p class="tiny-note">Te esperaba este lugar.</p>
+      <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+      <span class="floating-star star-a">✧</span><span class="floating-star star-b">✦</span>
+    </section>
+
+    <section class="museum screen" id="museum">
+      <div class="museum-heading">
+        <p class="eyebrow">BIENVENIDA A TU PEQUEÑO UNIVERSO</p>
+        <h2>Un recorrido por <em>ti</em></h2>
+        <p>Seis pequeñas salas. Muchas razones para admirarte.</p>
+      </div>
+      <div class="room-grid" id="roomGrid"></div>
+      <div class="museum-footer">
+        <span>RECORRE CADA RINCÓN A TU RITMO</span>
+        <span>✦</span>
+      </div>
+    </section>
+
+    <section class="room-view screen" id="roomView">
+      <button class="back-button" id="backButton">← Volver al museo</button>
+      <div class="room-content" id="roomContent"></div>
+      <div class="room-navigation">
+        <button class="outline-button" id="previousRoom">← Anterior</button>
+        <span id="roomCounter">SALA 01 / 06</span>
+        <button class="outline-button" id="nextRoom">Siguiente →</button>
+      </div>
+    </section>
+
+    <section class="letter-screen screen" id="letterScreen">
+      <p class="eyebrow">LA ÚLTIMA EXPOSICIÓN</p>
+      <h2>La obra que nunca<br><em>terminaré de admirar</em></h2>
+      <p class="letter-intro">Una última exposición. Una pequeña parte de todo lo que significas para mí.</p>
+      <button class="envelope" id="openLetter" aria-label="Abrir la carta">
+        <span class="envelope-heart">♡</span><span class="envelope-hint">Descubrir la última exposición</span>
+      </button>
+      <article class="letter-paper" id="letterPaper" aria-label="Carta para ti">
+        <div class="letter-topline"><span>COLECCIÓN PRIVADA</span><span>✦</span><span>PIEZA Nº 001</span></div>
+        <p class="script letter-dear">Mi niña hermosa:</p>
+        <p class="letter-paragraph">Hay algo que quiero que sepas antes de que termine este recorrido: este museo no fue creado para mostrar fotografías bonitas, reunir palabras románticas o hacerte sentir especial solamente por un momento. Lo hice porque, de alguna manera, quería encontrar una forma de mostrarte cómo te veo yo. Y aunque podría llenar miles de páginas intentando explicarlo, probablemente todavía me faltarían palabras.</p>
+        <p class="letter-paragraph">A veces me pongo a pensar en lo curioso que es todo. Entre tantas personas, tantos lugares y tantos caminos que pudieron cruzarse, tuve la oportunidad de conocerte a ti. Y desde entonces hay cosas que comenzaron a tener un significado diferente. Quizá tú no te das cuenta, pero tienes esa capacidad de hacer que momentos sencillos se conviertan en recuerdos que uno quisiera conservar para siempre.</p>
+        <p class="letter-paragraph">Me gusta observar esos pequeños detalles que te hacen ser tú. Tu manera de sonreír, tus expresiones, la forma en que hablas cuando algo te emociona y hasta esas pequeñas ocurrencias que aparecen cuando menos las espero. Son detalles que posiblemente para ti no tengan nada de extraordinario, pero que para mí forman parte de todo aquello que hace que seas tan especial.</p>
+        <p class="letter-paragraph">Y no, no hablo solamente de tu belleza, aunque sería imposible no admirarla. Hablo de todo lo que existe detrás de esa sonrisa, de la persona que eres cuando nadie está mirando, de tus pensamientos, tus sueños, tus gustos, tus ocurrencias y hasta de esas pequeñas imperfecciones que te hacen humana. Porque no quiero admirar únicamente tus mejores fotografías; también quiero conocer y querer a la persona que existe detrás de ellas.</p>
+        <p class="letter-paragraph">Si alguna vez te preguntas qué encuentro en ti, quisiera que recordaras algo: no necesito que seas perfecta para encontrar motivos para elegirte. No necesito que todos tus días sean buenos ni que siempre tengas una sonrisa preparada. También quiero estar presente en los días normales, en los días complicados y en esos momentos en los que simplemente no tengas ganas de hacer nada. No porque tenga todas las respuestas, sino porque me importa compartir contigo mucho más que los momentos bonitos.</p>
+        <p class="letter-paragraph">Hay tantas cosas que todavía me gustaría vivir a tu lado. Más conversaciones que se alarguen sin darnos cuenta, más risas por tonterías, más fotografías que algún día podamos mirar con nostalgia y más momentos que todavía no sabemos que terminarán convirtiéndose en recuerdos. Me ilusiona pensar en todas esas experiencias que aún nos esperan y en las historias que todavía nos falta escribir.</p>
+        <p class="letter-paragraph">Y si algo quisiera pedirte es que nunca olvides lo valiosa que eres. Que nunca permitas que un mal día te haga dudar de todo lo bonito que hay en ti. Que sigas teniendo sueños, que sigas descubriendo cosas nuevas, que nunca pierdas esa esencia que te hace diferente. Quiero verte crecer, cumplir tus metas y convertirte en todo aquello que deseas ser. Y si la vida me permite acompañarte en ese camino, créeme que será una de las cosas que más voy a valorar.</p>
+        <p class="letter-paragraph">Quizá algún día vuelvas a visitar este pequeño museo. Tal vez encuentres las mismas fotografías, las mismas salas y estas mismas palabras. Pero espero que, cuando eso suceda, puedas recordar que hubo alguien que quiso detener un poquito el tiempo para construir un lugar donde tú fueras la protagonista.</p>
+        <p class="letter-paragraph">Porque hay obras que se contemplan una vez y después se olvidan. Hay otras que uno puede mirar durante horas y siempre encuentra algo nuevo. Y luego estás tú, que incluso después de conocerte, sigo encontrando razones para admirarte.</p>
+        <div class="letter-ending">
+          <span class="ending-ornament">✧ ───────── ✧</span>
+          <p class="letter-final">Esta exposición termina aquí, pero mi admiración por ti no tiene una última sala.</p>
+          <p class="script letter-sign">Con todo mi amor. <span>♡</span></p>
+        </div>
+        <div class="letter-bottomline">FIN DE LA EXPOSICIÓN <span>·</span> PERO NO DE LO QUE SIENTO</div>
+      </article>
+      <button class="outline-button return-button" id="returnMuseum">Volver a las salas</button>
+    </section>
+  </main>
+
+  <footer><span>HECHO CON CARIÑO, PARA UNA PERSONA ÚNICA</span><span>✦</span></footer>
+
+  <audio id="backgroundMusic" src="assets/audio/chachacha.mp3" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
